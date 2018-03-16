@@ -1,0 +1,9 @@
+<%= File.dirname(node['php_fpm']['log_file']) %>/*.log {
+       weekly
+       rotate 10
+       copytruncate
+       delaycompress
+       compress
+       notifempty
+       missingok
+}
