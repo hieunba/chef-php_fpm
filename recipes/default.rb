@@ -8,8 +8,10 @@ include_recipe 'php_fpm::prepare'
 
 php_packages = node['php_fpm']['packages'] || %w(php php-fpm)
 
-php_packages.each do |php_pkg|
+php_packages.mapeach do |php_pkg|
   package php_pkg
 end
+
+package 'php-apcu'
 
 include_recipe 'php_fpm::configure'

@@ -12,4 +12,4 @@ default['php_fpm']['socket_dir'] = '/var/run/php'
 default['php_fpm']['tmp_dir'] = '/tmp/php'
 default['php_fpm']['cli'] = ''
 
-default['php_fpm']['packages'] = %w(php php-cli php-fpm php-curl php-gd php-mysql php-mcrypt php-sqlite3 php-apcu)
+default['php_fpm']['packages'] = %w(php php-cli php-fpm php-curl php-gd php-mysql php-mcrypt php-sqlite3)
