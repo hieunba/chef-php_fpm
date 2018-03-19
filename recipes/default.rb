@@ -6,9 +6,13 @@
 include_recipe 'php_fpm::ppa'
 include_recipe 'php_fpm::prepare'
 
-php_packages = node['php_fpm']['packages'] || %w(php php-fpm)
+php_packages = if node['php_fpm']['version']
+  node['php_fpm']['packages'].map { |p| p.insert 3, node['php_fpm']['version'] }
+else
+  node['php_fpm']['packages']
+end
 
-php_packages.mapeach do |php_pkg|
+php_packages.each do |php_pkg|
   package php_pkg
 end
 

@@ -5,8 +5,10 @@
 # Copyright:: 2018, Nghiem Ba Hieu, All Rights Reserved.
 include_recipe 'php_fpm::service'
 
-php_etc_dir = '/etc/php/7.0'
-php_fpm_dir = '/etc/php/7.0/fpm'
+php_version = node['php_fpm']['version']
+
+php_etc_dir = "/etc/php/#{php_version}"
+php_fpm_dir = "#{php_etc_dir}/fpm"
 php_cli_dir = "#{php_etc_dir}/cli"
 php_conf_dir = "#{php_cli_dir}/conf.d"
 php_fpm_conf_file = "#{php_fpm_dir}/php-fpm.conf"

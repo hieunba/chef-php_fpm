@@ -5,4 +5,6 @@
 # Copyright:: 2018, Nghiem Ba Hieu, All Rights Reserved.
 include_recipe 'apt::default'
 
-Chef::Log.debug("Avoid using external PPA as much as possible")
+apt_repository 'ondrej-php' do
+  uri node['php_fpm']['repo']['uri']
+end
