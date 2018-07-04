@@ -16,4 +16,9 @@ default['php_fpm']['pid_file'] = "#{node['php_fpm']['service']}.pid"
 default['php_fpm']['tmp_dir'] = '/tmp/php'
 default['php_fpm']['cli'] = ''
 
-default['php_fpm']['packages'] = %w(php php-cli php-fpm php-curl php-gd php-mysql php-mcrypt php-sqlite3)
+php_fpm_packages = %w(php php-cli php-fpm php-curl php-gd php-mysql php-sqlite3)
+default['php_fpm']['packages'] = if node['php_fpm']['version'] == '7.2'
+                                   php_fpm_packages
+                                 else
+                                   php_fpm_packages << 'php-mcrypt'
+                                 end
