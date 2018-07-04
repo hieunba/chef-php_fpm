@@ -4,7 +4,7 @@ maintainer_email 'hi3unb@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures php_fpm'
 long_description 'Installs/Configures php_fpm'
-version '0.1.0'
+version '0.1.1'
 chef_version '>= 12.18.31' if respond_to?(:chef_version)
 
 supports 'ubuntu', '>= 16.04'
