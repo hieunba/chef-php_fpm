@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the php_fpm cookbook.
 
+# 0.1.2 (2018-07-04)
+
+- Correct php packages list if php 7.2 selected
+
 # 0.1.1 (2018-07-04)
 
 - Fixes #1: can't modify frozen String for newer version of Chef.
