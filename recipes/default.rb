@@ -16,6 +16,5 @@ php_packages.each do |php_pkg|
   package php_pkg
 end
 
-package 'php-apcu'
-
+include_recipe 'php_fpm::apcu'
 include_recipe 'php_fpm::configure'
