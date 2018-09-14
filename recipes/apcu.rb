@@ -4,4 +4,4 @@
 #
 # Copyright:: 2018, Nghiem Ba Hieu, All Rights Reserved.
 
-package 'php-apcu' unless node['php_fpm']['version'].to_int == 5
+package 'php-apcu' unless node['php_fpm']['version'].to_i == 5
