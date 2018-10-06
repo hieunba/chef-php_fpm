@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the php_fpm cookbook.
 
+# 0.2.0 (2018-10-07)
+
+- Install php zip extension by default
+
 # 0.1.3 (2018-08-14)
 
 - Prevent unwanted Apache2 installation
