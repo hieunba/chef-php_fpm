@@ -18,6 +18,7 @@ default['php_fpm']['cli'] = ''
 
 php_fpm_packages = %w(php-cli php-fpm php-curl php-gd php-mysql php-sqlite3
                       php-xml php-mbstring php-bcmath)
+php_fpm_packages << 'php-zip'
 default['php_fpm']['packages'] = if node['php_fpm']['version'] == '7.2'
                                    php_fpm_packages
                                  else
