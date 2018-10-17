@@ -1,5 +1,5 @@
 default['php_fpm']['repo']['uri'] = 'ppa:ondrej/php'
-default['php_fpm']['version'] = '7.0'
+default['php_fpm']['version'] = '7.2'
 default['php_fpm']['service'] = "php#{node['php_fpm']['version']}-fpm"
 default['php_fpm']['user'] = 'www-data'
 default['php_fpm']['group'] = 'www-data'
