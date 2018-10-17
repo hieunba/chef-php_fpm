@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the php_fpm cookbook.
 
+# 0.3.0 (2018-10-17)
+
+- Install PHP 7.2 by default as PHP 5.x or PHP 7.0 reaches the end of life soon.
+
 # 0.2.0 (2018-10-07)
 
 - Install php zip extension by default
