@@ -1,5 +1,5 @@
 [global]
-pid = <%= node['php_fpm']['socket_dir'] || '/var/run' %>/<%= node['php_fpm']['pid_file'] || 'php7.0-fpm.pid' %>
+pid = <%= @php_fpm_socket_dir || '/var/run' %>/<%= @php_fpm_pid_file || 'php7.0-fpm.pid' %>
 error_log = <%= node['php_fpm']['fpm_log_file'] %>
 log_level = notice
 
@@ -27,7 +27,7 @@ daemonize = yes
 
 [www]
 
-listen = <%= node['php_fpm']['socket_dir'] || '/var/run' %>/<%= node['php_fpm']['socket_file'] || 'php7.0-fpm.sock' %>
+listen = <%= @php_fpm_socket_dir || '/var/run' %>/<%= @php_fpm_socket_file || 'php7.0-fpm.sock' %>
 listen.backlog = -1
 
 listen.owner = <%= node['php_fpm']['user'] %>

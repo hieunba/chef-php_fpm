@@ -49,6 +49,11 @@ template php_fpm_conf_file do
   source 'php-fpm.conf.erb'
   owner 'root'
   group 'root'
+  variables(
+    php_fpm_socket_dir: node['php_fpm']['socket_dir'],
+    php_fpm_socket_file: "php#{node['php_fpm']['version']}-fpm.sock",
+    php_fpm_pid_file: "php#{node['php_fpm']['version']}-fpm.pid"
+  )
   notifies :restart, 'service[php-fpm]', :delayed
 end
 
