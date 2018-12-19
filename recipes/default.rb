@@ -14,7 +14,7 @@ else
   node['php_fpm']['packages']
 end
 
-if Gem::Version.new(php_version) >= Gem::Version.new('7.2')
+if Gem::Version.new(php_version) < Gem::Version.new('7.2')
   php_packages << "php#{php_version}-mcrypt"
 end
 
