@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the php_fpm cookbook.
 
+## 0.3.2 (2018-12-19)
+
+- Correct condition to install mcrypt after refactor attributes declaration
+
 ## 0.3.1 (2018-12-19)
 
 - Reheading styles for logs
